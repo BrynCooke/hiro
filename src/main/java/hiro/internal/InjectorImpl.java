@@ -13,7 +13,7 @@ public class InjectorImpl implements Injector {
 
 	private TransformingClassLoader cl = new TransformingClassLoader();
 
-	private ConcurrentMap<Scope, ScopeDefinition> activeScopes = new ConcurrentHashMap<>();
+	private ConcurrentMap<Scope, ScopeDefinitionFactory> activeScopes = new ConcurrentHashMap<>();
 
 	@Override
 	public <T> T get(TypeLiteral<T> type) {
@@ -53,7 +53,7 @@ public class InjectorImpl implements Injector {
 				throw new RuntimeException("Scope already active");
 			}
 			try {
-				activeScopes.put(scope, new ScopeDefinition(scope.getClass()));
+				activeScopes.put(scope, new ScopeDefinitionFactory(scope.getClass()));
 				scope.run();
 			} finally {
 				activeScopes.remove(scope.getClass());

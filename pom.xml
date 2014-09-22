@@ -30,7 +30,11 @@
 			<artifactId>jandex</artifactId>
 			<version>1.2.1.Final</version>
 		</dependency>
-		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
