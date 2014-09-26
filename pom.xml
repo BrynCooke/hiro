@@ -4,38 +4,11 @@
 	<groupId>org.jglue</groupId>
 	<artifactId>hiro</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<dependencies>
-		<dependency>
-			<groupId>javax.inject</groupId>
-			<artifactId>javax.inject</artifactId>
-			<version>1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.javassist</groupId>
-			<artifactId>javassist</artifactId>
-			<version>3.18.2-GA</version>
-		</dependency>
-		<dependency>
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava</artifactId>
-			<version>17.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.objenesis</groupId>
-			<artifactId>objenesis</artifactId>
-			<version>2.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.jboss</groupId>
-			<artifactId>jandex</artifactId>
-			<version>1.2.1.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-		</dependency>
-	</dependencies>
+	<packaging>pom</packaging>
+	<modules>
+		<module>hiro-agent</module>
+		<module>hiro-injection</module>
+	</modules>
 	<build>
 		<plugins>
 			<plugin>
@@ -49,4 +22,6 @@
 			</plugin>
 		</plugins>
 	</build>
+
+
 </project>

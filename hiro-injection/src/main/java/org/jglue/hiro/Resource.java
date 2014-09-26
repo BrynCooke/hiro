@@ -1,4 +1,4 @@
-package hiro;
+package org.jglue.hiro;
 
 public @interface Resource {
 

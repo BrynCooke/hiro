@@ -1,4 +1,4 @@
-package hiro;
+package org.jglue.hiro;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
